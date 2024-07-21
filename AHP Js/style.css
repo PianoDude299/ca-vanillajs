@@ -1,0 +1,160 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ece9e6, #ffffff);
+    background-size: 400% 400%;
+    animation: gradientBackground 15s ease infinite;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevents scrollbars from appearing */
+}
+
+@keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    position: relative;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); /* Slightly transparent */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    z-index: 1; /* Ensures container is above background shapes */
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input[type="text"], input[type="number"] {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+    background-color: #5cb85c;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+#criteriaList {
+    margin-top: 20px;
+}
+
+.criteria-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fafafa;
+}
+
+.criteria-card input[type="text"] {
+    flex: 2;
+    margin-right: 10px;
+}
+
+.criteria-card input[type="file"] {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.criteria-card button {
+    margin-left: 5px;
+    padding: 5px 10px;
+    background-color: #d9534f;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    flex: 0 0 auto;
+}
+
+.criteria-card button:hover {
+    background-color: #c9302c;
+}
+
+#addCriteria, #submitCriteria {
+    margin-top: 20px;
+    background-color: #5cb85c;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+#addCriteria:hover, #submitCriteria:hover {
+    background-color: #4cae4c;
+}
+
+/* Shapes animation */
+.background-shape {
+    position: absolute;
+    z-index: 0;
+    opacity: 0.2;
+    border-radius: 50%;
+    animation: moveShapes 20s linear infinite;
+}
+
+@keyframes moveShapes {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+    50% {
+        transform: translateY(-100px) translateX(100px);
+    }
+    100% {
+        transform: translateY(0) translateX(0);
+    }
+}
+
+.shape1 {
+    width: 150px;
+    height: 150px;
+    background-color: #f39c12;
+    top: 10%;
+    left: 10%;
+}
+
+.shape2 {
+    width: 200px;
+    height: 200px;
+    background-color: #e74c3c;
+    top: 70%;
+    left: 50%;
+}
+
+.shape3 {
+    width: 100px;
+    height: 100px;
+    background-color: #9b59b6;
+    top: 40%;
+    left: 80%;
+}
